@@ -1,0 +1,13 @@
+@function stripUnit($value)
+    @return $value / ($value * 0 + 1)
+
+@function rem($pxValue) 
+    @return #{stripUnit($pxValue) / stripUnit($font-size)}rem
+
+@mixin circle($size) 
+  border-radius: 50%
+  width: $size
+  height: $size
+  display: flex
+  justify-content: center
+  align-items: center

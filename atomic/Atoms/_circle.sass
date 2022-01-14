@@ -1,0 +1,40 @@
+.circle
+  @include circle(rem(20px))
+  position: relative
+  cursor: pointer
+  &:hover
+    &::before
+      visibility: visible
+  
+.circle:before
+  @include circle(rem(20px))
+  content:''
+  position: absolute
+  left: -3px
+  top: -3px
+  background-color: yellow
+  padding: 2px
+  visibility: hidden
+  background-color: transparent
+  border-width: 1px
+  border-style: solid
+
+.circle_white-color
+  background-color: $shopparty-W0
+  &::before
+    border-color: $shopparty-W0
+
+.circle_orange-color
+  background-color: #DD7878
+  &::before
+    border-color: #DD7878
+
+.circle_red-color
+  background-color: #C31212
+  &::before
+    border-color: #C31212
+
+.circle_blue-color
+  background-color: #3D8CAE
+  &::before
+    border-color: #3D8CAE
