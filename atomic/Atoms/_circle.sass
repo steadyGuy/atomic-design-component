@@ -2,6 +2,9 @@
   @include circle(rem(20px))
   position: relative
   cursor: pointer
+  // margins for emulating border size (which is actually 3px)
+  margin-top: rem(3px)
+  margin-bottom: rem(3px)
   &:hover
     &::before
       visibility: visible
@@ -10,13 +13,13 @@
   @include circle(rem(20px))
   content:''
   position: absolute
-  left: -3px
-  top: -3px
+  left: rem(-3px)
+  top: rem(-3px)
   background-color: yellow
-  padding: 2px
+  padding: rem(2px)
   visibility: hidden
   background-color: transparent
-  border-width: 1px
+  border-width: rem(1px)
   border-style: solid
 
 .circle_white-color

@@ -3,13 +3,13 @@
   background-size: cover
   background-position: center center
   width: rem(258px)
-  height: 160px
+  height: rem(160px)
   position: relative
   border-radius: rem(6px)
   &:hover
     border-radius: rem(6px) rem(6px) 0 0 
     .card_toggle
-      height: 80px
+      height: rem($baseline * 3)
       opacity: 1
     .card_buttons-toggle
       visibility: visible
@@ -22,7 +22,6 @@
   height: 0%
   overflow: hidden
   // fixing border issue (hiding on overflow-hidden)
-  padding-top: 3px
   opacity: 0
   transition: all 0.15s ease-in-out
   background: linear-gradient(rgba(19, 17, 29, 0) 8.32%,rgba(19, 17, 29, 0.6) 43.75%, #13111D 63.75%)
@@ -46,4 +45,4 @@
     width: calc(100% + 2.5px)
     height: 100%
     border-radius: rem(6px)
-    z-index: 100
+    z-index: 1

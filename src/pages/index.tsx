@@ -35,23 +35,24 @@ const Home: NextPage = () => {
       </div>
       <span className="text mg--t__1 pd--b__3 mg--l__2">Soho Coat</span>
       <div className="card_toggle">
-        <div className="items_slider">
-
+        <div className="items_slider align-items-c">
           <ArrowLeftIcon />
-          {colors.map((itm, i) => (
-            <div key={i} className={`circle mg--l__3 ${itm.color} ${i === colors.length - 1 ? 'mg--r__3' : ''}`} />
-          ))}
+          <div className='wrapper'>
+            {colors.map((itm, i) => (
+              <div key={i} className={`circle mg--l__3 ${itm.color} ${i === colors.length - 1 ? 'mg--r__3' : ''}`} />
+            ))}
+          </div>
           <ArrowRightIcon />
 
         </div>
-        <div className="items_slider pd--t__3">
-          <ArrowLeftIcon className="mg--r__2" />
+        <div className="items_slider pd--t__2 align-items-end">
+          <div className='d-flex align-items-c'>
+          <ArrowLeftIcon className="mg--r__3" />
           <div className={clsx('wrapper', selectedSize === null && 'wrapper_restrict')}>
             {sizes.map((itm, i) => (
               <div key={itm.id}
                 onClick={() => handleSizeSelect(itm.id)}
-                className={`size-round mg--l__1 
-            ${selectedSize === itm.id ? 'size-round_selected' : ''}`
+                className={`size-round ${selectedSize === itm.id ? 'size-round_selected' : ''} ${i !== 0 ? 'mg--l__1' : ''}`
                 }
               >
                 <span>
@@ -60,7 +61,8 @@ const Home: NextPage = () => {
               </div>
             ))}
           </div>
-          <ArrowRightIcon className="mg--l__2" />
+          <ArrowRightIcon className="mg--l__3" />
+          </div>
           <button className={`mg--l__1 button button_card  ${selectedSize !== null ? 'hidden' : ''}`}>
             <BasketIcon />
           </button>

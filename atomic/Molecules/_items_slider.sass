@@ -1,11 +1,13 @@
 .items_slider
   width: 100%
-  @include center-flex()
+  display: flex
+  justify-content: center
 
 .items_slider .wrapper
   @include center-flex()
-  overflow-x: hidden
+  overflow: hidden
   justify-content: flex-start
+  max-width: rem($baseline * 9)
 
 .items_slider .wrapper_restrict
-  width: 164px
+  width: rem(155px)
